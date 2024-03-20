@@ -103,6 +103,6 @@ def logOut():
     return redirect('/')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
     app.add_url_rule('/favicon.ico', redirect_to=url_for('static', filename='favicon.ico'))
     app.add_url_rule('/static/<path:filename>', endpoint='static', view_func=app.send_static_file)
